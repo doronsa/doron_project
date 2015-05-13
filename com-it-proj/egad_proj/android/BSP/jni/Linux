@@ -1,0 +1,22 @@
+#CC	= /home/user/imx-android-jb4.2.2_1.0.0-ga-var11/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.6/bin/arm-linux-androideabi-gcc --sysroot=${SYSROOT}
+PROGRAMS = lib_bmp.c  printer_bmp.c  bsp_api.c  sii_api.c
+CC = gcc
+LIBDIR = $(PREFIXDIR)/lib
+INCDIR = -I. 
+LIBS = 
+AIO_LIBS = $(LIBS)/librt.so
+
+LDFLAGS	= $(PROGRAMS)   $(INCDIR)  -o lprinter 
+
+CFLAGS = -g 
+
+RM	= rm -f
+
+all:: 
+	$(CC) $(CFLAGS) $(LDFLAGS)
+
+
+clean::
+	$(RM)   lprinter *.o
+
+

@@ -1,0 +1,481 @@
+#include <stdio.h>
+#include <string.h>
+#include <sii_api.h>
+
+#define size_t unsigned int
+//echo -e '\x12\x74' > /dev/usb/lp0
+
+// Call back function for checking status.
+
+#define SLEEP_TIME2 1000*1000 //1000 mili
+#define SLEEP_TIME 1000*1000 //1000 mili
+SIIAPIHANDLE	hSiiApiHandle = NULL;
+unsigned long	lStaData = 0;
+int				nIndex;
+int				nSize;
+unsigned char	pbyRecBuf[512];
+unsigned char	pbyCmdBuf[256];
+int				nRetVal;
+size_t			tagRetSize;
+
+int cutType;
+int cutSize;
+
+int print_error(unsigned long plResp)
+{
+
+	int ret = 0;
+
+	unsigned char Byte1 =  (unsigned char)(plResp) ;
+	unsigned char Byte2 =  (unsigned char)(plResp >> 8) ;
+	unsigned char Byte3 =  (unsigned char)(plResp >> 16) ;
+	unsigned char Byte4 =  (unsigned char)(plResp >> 24) ;
+
+
+	if(Byte1 & 1 == 0)
+	{
+		printf( "Paper feed Error\n");
+		ret += 1;
+	}
+
+	if(Byte1 & 32 )
+	{
+		printf( "Platen sensor Error\n");
+		ret += 2;
+	}
+	if(Byte1 & 64 )
+	{
+		printf( "Paper feed by the switch Error\n");
+		ret += 4;
+	}
+
+
+	if(Byte2 & 4 )
+	{
+		printf( "Paper Jam Error\n");
+		ret += 8;
+	}
+	if(Byte2 & 8 )
+	{
+		printf( "Autocutter Error\n");
+		ret += 16;
+	}
+	if(Byte2 & 32 )
+	{
+		printf( "Head Error\n");
+		ret += 32;
+	}
+	if(Byte2 & 64 )
+	{
+		printf( "Recovery Error\n");
+		ret += 64;
+	}
+
+
+	if(Byte3 & 1 )
+	{
+		printf( "Paper Near End\n");
+		ret += 128;
+	}
+	if(Byte3 & 4 )
+	{
+		printf( "Out Of Paper\n");
+		ret += 256;
+	}
+
+ 	return ret;
+
+}
+int check_status()
+{
+
+  int nRetVal = sii_api_get_status( hSiiApiHandle, &lStaData );
+		if( nRetVal < 0 )
+                {
+			printf( "ERROR : sii_api_get_status %d\n",nRetVal );
+                        return nRetVal;
+                }
+
+		else
+		printf( "status : [0x%08x]\n", lStaData );
+				if((lStaData == 0x00010010 )||(lStaData == 0x00000010))
+                //if((lStaData ^ 0x10) == 0 )
+                 {
+                   printf( "OK \n");
+                   return 0;
+                 }
+                else
+                 {
+		            return print_error(lStaData);
+                   // return lStaData;
+                 }
+}
+
+int reset_device()
+{
+  int nRetVal = sii_api_reset_device( hSiiApiHandle );
+  if( nRetVal < 0 )
+     printf( "ERROR : sii_api_reset_device %d\n",nRetVal );
+
+
+  return nRetVal;
+}
+
+
+void print_text(char* text , int len)
+{
+                stpcpy(pbyCmdBuf, text);
+                nSize = len;
+
+
+
+                pbyCmdBuf[0] = 0x1b;
+		pbyCmdBuf[1] = 0x21;
+		pbyCmdBuf[2] = 120;
+
+
+
+		pbyCmdBuf[nSize++] = 0x0a;
+		pbyCmdBuf[nSize++] = 0x12;
+		pbyCmdBuf[nSize++] = 'q';
+		pbyCmdBuf[nSize++] = 0x00;
+
+		nRetVal = sii_api_write_device(
+								hSiiApiHandle,
+								pbyCmdBuf,
+								nSize,
+								&tagRetSize );
+		if( nRetVal < 0 )
+		{
+			printf( "ERROR : sii_api_write_device %d\n",nRetVal );
+		}
+		else
+		{
+			usleep(SLEEP_TIME);
+			nRetVal = sii_api_read_device(
+									hSiiApiHandle,
+									pbyRecBuf,
+									sizeof( pbyRecBuf ),
+									&tagRetSize );
+			if( nRetVal < 0 )
+			{
+				printf( "ERROR : sii_api_read_device %d\n",nRetVal );
+			}
+			else
+			{
+				printf( "Received data : [%d byte]\n",tagRetSize );
+				if(tagRetSize >= 3 )
+							       {
+                                                                 unsigned long plResp = (unsigned long)(
+									pbyRecBuf[0] << 0	|
+									pbyRecBuf[1] << 8	|
+			 						pbyRecBuf[2] << 16	|
+									pbyRecBuf[3] << 24	);
+                                                                 printf( "status : [0x%08x]\n", plResp );
+
+                                                               }
+                                for( nIndex = 0; nIndex < tagRetSize; nIndex++ )
+				{
+					printf( "[0x%02x] ", pbyRecBuf[nIndex] );
+				}
+			}
+			printf( "\n" );
+		}
+
+
+}
+
+
+int util( int argc,char **argv )
+{
+
+	int ret = 0;
+
+	if( argc < 2 )
+	{	fprintf( stderr,"Argument error\n\n" );
+		fprintf( stderr,"%s [mode] \n\n",argv[0] );
+		fprintf( stderr,"mode 0 : Init \n" );
+		fprintf( stderr,"mode 1 : Print & read response \n" );
+		fprintf( stderr,"mode 2 : Reset device \n" );
+		fprintf( stderr,"mode 3 : Print BMP [File]\n" );
+        fprintf( stderr,"mode 4 : Cut paper [0\\1] [0-255] \n" );
+        fprintf( stderr,"mode 5 : Get Status\n" );
+
+		return ( -1 );
+	}
+
+	if( ( nRetVal = sii_api_open_device( &hSiiApiHandle, "/dev/usb/lp0" ) ) < 0 )
+	{	printf( "ERROR : device path: %s\n", "/dev/usb/lp0" );
+		return ( -1 );
+	}
+
+	switch( atoi( argv[1] ) )
+	{
+	case 0:
+		printf( "Init \n" );
+        reset_device();
+		usleep(SLEEP_TIME * 2);
+
+                //XXXXXXXXXXX
+                //12H 77H 1 DF 1 00H
+        nSize = 0;
+		pbyCmdBuf[nSize++] = 0x12;
+		pbyCmdBuf[nSize++] = 0x77;
+		pbyCmdBuf[nSize++] = 0x1;
+        pbyCmdBuf[nSize++] = 0xDE;
+        pbyCmdBuf[nSize++] = 0x1;
+		pbyCmdBuf[nSize++] = 0x0;
+
+		nRetVal = sii_api_write_device(
+								hSiiApiHandle,
+								pbyCmdBuf,
+								nSize,
+								&tagRetSize );
+		if( nRetVal < 0 )
+		{
+			printf( "ERROR : sii_api_write_device %d\n",nRetVal );
+		}
+
+               // else
+                //{
+ 		//   ret = check_status();
+               // }
+
+
+                //XXXXXXXXXXX
+/*
+                nSize = 0;
+		pbyCmdBuf[nSize++] = 0x1b;
+		pbyCmdBuf[nSize++] = 0x63;
+		pbyCmdBuf[nSize++] = 0x34;
+                pbyCmdBuf[nSize++] = 0x3;
+
+		nRetVal = sii_api_write_device(
+								hSiiApiHandle,
+								pbyCmdBuf,
+								nSize,
+								&tagRetSize );
+		if( nRetVal < 0 )
+		{
+			printf( "ERROR : sii_api_write_device %d\n",nRetVal );
+		}
+  */
+                else
+                {
+ 		     usleep(SLEEP_TIME);
+                     ret = check_status();
+                }
+
+		break;
+
+	case 1:
+		ret = check_status();
+		if(ret != 0)
+                   break;
+
+
+
+                char* cmdstring = "ABC \n ***********\n Test\n  Test1\n  Test3\n  Test4\n  Test5\n  Test6 \n**********\n\n\n";
+                int strsize = 89;
+
+
+               // printf("cmdstring: %s\n", cmdstring);
+		if (argc >= 3)
+		{
+
+
+		    int i;
+		    strsize = 0;
+		    for (i=1; i<argc; i++) {
+			strsize += strlen(argv[i]);
+			if (argc > i+1)
+			    strsize++;
+		    }
+
+		    printf("strsize: %d\n", strsize);
+
+		    //char *cmdstring;
+		    cmdstring = malloc(strsize);
+		    cmdstring[0] = '\0';
+
+		    for (i=1; i<argc; i++) {
+			strcat(cmdstring, argv[i]);
+			if (argc > i+1)
+			    strcat(cmdstring, " \n");
+		    }
+
+		    printf("cmdstring: %s\n", cmdstring);
+
+		}
+
+                print_text(cmdstring ,strsize);
+               // if(cmdstring && (argc >= 3))
+                 // free(cmdstring);
+		break;
+
+	case 2:
+
+                printf( "Reset device test\n");
+                return reset_device();
+
+		break;
+
+       case 4:
+		ret = check_status();
+		if(ret != 0)
+                   break;
+                cutType = 0;
+                cutSize = 0;
+
+                if (argc >= 3)
+                 {
+                   cutType = 1;
+                 }
+
+
+                printf( "Cut paper \n");
+
+
+				nSize = 0;
+				pbyCmdBuf[nSize++] = 0x1d;
+				pbyCmdBuf[nSize++] = 0x56;
+				pbyCmdBuf[nSize++] = cutType;
+
+              if (argc >= 4)
+                 {
+                   cutSize = atoi(argv[3]);
+                   if(0 <= cutSize && cutSize <= 255)
+                       pbyCmdBuf[nSize++] = cutSize;
+                 }
+
+           //printf("%d %d\n",cutType,cutSize);
+
+				nRetVal = sii_api_write_device(
+										hSiiApiHandle,
+										pbyCmdBuf,
+										nSize,
+										&tagRetSize );
+				if( nRetVal < 0 )
+				{
+					printf( "ERROR : sii_api_write_device %d\n",nRetVal );
+				}
+				else
+				{
+					usleep(SLEEP_TIME);
+					nRetVal = sii_api_read_device(
+											hSiiApiHandle,
+											pbyRecBuf,
+											sizeof( pbyRecBuf ),
+											&tagRetSize );
+					if( nRetVal < 0 )
+					{
+						printf( "ERROR : sii_api_read_device %d\n",nRetVal );
+					}
+					else
+					{
+						printf( "Received data : [%d byte]\n",tagRetSize );
+						for( nIndex = 0; nIndex < tagRetSize; nIndex++ )
+						{
+							printf( "[0x%02x] ", pbyRecBuf[nIndex] );
+						}
+					}
+					printf( "\n" );
+				}
+		break;
+
+
+
+	case 3:
+			    ret = check_status();
+		            if(ret != 0)
+                                break;
+			    printf("");
+                            int index = 0,var;
+			    char* buffer = {0};
+
+			    nRetVal = CreatePrinterBuffer(argv[2] ,  &buffer , &index);
+			    if(nRetVal < 0)
+			    	break;
+
+                                 nRetVal = sii_api_write_device(
+												hSiiApiHandle,
+												buffer,
+												index,
+												&tagRetSize );
+						if( nRetVal < 0 )
+						{
+							printf( "ERROR : sii_api_write_device %d\n",nRetVal );
+						}
+						else
+						{
+							usleep(SLEEP_TIME);
+							nRetVal = sii_api_read_device(
+													hSiiApiHandle,
+													pbyRecBuf,
+													sizeof( pbyRecBuf ),
+													&tagRetSize );
+							if( nRetVal < 0 )
+							{
+								printf( "ERROR : sii_api_read_device %d\n",nRetVal );
+							}
+							else
+							{
+							       printf( "Received data : [%d byte]\n",tagRetSize );
+
+                                                               if(tagRetSize >= 3 )
+							       {
+                                                                 unsigned long plResp = (unsigned long)(
+									pbyRecBuf[0] << 0	|
+									pbyRecBuf[1] << 8	|
+									pbyRecBuf[2] << 16	|
+									pbyRecBuf[3] << 24	);
+                                                                 printf( "status : [0x%08x]\n", plResp );
+                                                                 if(!(plResp ^ 0x12) )
+                                                                   {
+								      ret = print_error(plResp) ;
+								   }
+                                                                }
+                                                               else
+                                                                {
+
+                                                                 printf( "General Error\n" );
+                                                                 for( nIndex = 0; nIndex < tagRetSize; nIndex++ )
+								 {
+									printf( "[0x%02x] ", pbyRecBuf[nIndex] );
+								 }
+                                                               }
+							}
+							printf( "\n" );
+						}
+
+
+
+				if(buffer)
+				   free(buffer);
+
+
+	break;
+
+	 case 5:
+			ret = check_status();
+			break;
+
+
+	default:
+		printf( "This mode number is wrong.\n" );
+		break;
+	}
+
+	sii_api_close_device( hSiiApiHandle );
+    if(ret == 0 && nRetVal < 0)
+    	return  nRetVal;
+    else
+        return ret;
+}
+
+
+int main( int argc,char **argv )
+{
+  return util(argc,argv);
+}
+

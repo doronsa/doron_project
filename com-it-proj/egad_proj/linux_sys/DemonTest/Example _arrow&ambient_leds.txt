@@ -1,0 +1,13 @@
+		St_K10_DisplaySet lcd;	
+
+		lcd.DisplayCommand=e_K10_Dsp_SetArrowLed;
+		CmdK10_DisplayCommandSet(&lcd);
+
+		lcd.DisplayCommand=e_K10_Dsp_SetAmbient;
+		CmdK10_DisplayCommandSet(&lcd);
+		
+		lcd.DisplayCommand=e_K10_Dsp_ClrArrowLed;
+		CmdK10_DisplayCommandSet(&lcd);
+
+		lcd.DisplayCommand=e_K10_Dsp_ClrAmbient;
+		CmdK10_DisplayCommandSet(&lcd);

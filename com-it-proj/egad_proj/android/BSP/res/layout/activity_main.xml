@@ -1,0 +1,128 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="top"
+    android:onClick="ModemStat"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".BSPUtils" >
+
+    <Button
+        android:id="@+id/button6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button5"
+        android:layout_below="@+id/button5"
+        android:layout_marginTop="14dp"
+        android:layout_toLeftOf="@+id/button3"
+        android:onClick="ModemDrop"
+        android:text="Modem Drop." />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="43dp"
+        android:onClick="PrinterTest"
+        android:text="Printer Test" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button2"
+        android:layout_marginLeft="29dp"
+        android:layout_toRightOf="@+id/button1"
+        android:onClick="ModemConn"
+        android:text="Modem Conn." />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/button6"
+        android:layout_marginLeft="39dp"
+        android:layout_toRightOf="@+id/button5"
+        android:onClick="lcd_test"
+        android:text="Led And Lcd  Test" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_alignRight="@+id/button1"
+        android:layout_below="@+id/button1"
+        android:layout_marginTop="17dp"
+        android:onClick="CutPaper"
+        android:text="Cut Paper" />
+
+    <Button
+        android:id="@+id/Rssi_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button2"
+        android:layout_below="@+id/button2"
+        android:layout_marginTop="15dp"
+        android:layout_toLeftOf="@+id/button5"
+        android:onClick="SendCommandGetAppVer"
+        android:text="BSP Ver"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/k10_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textView1"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignRight="@+id/k10_button"
+        android:onClick="k10_test"
+        android:text="Test Com K10 " />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/Rssi_button"
+        android:layout_alignRight="@+id/amb_button"
+        android:layout_below="@+id/Rssi_button"
+        android:layout_marginTop="16dp"
+        android:text="status :" />
+
+    <Button
+        android:id="@+id/amb_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/Rssi_button"
+        android:layout_alignBottom="@+id/Rssi_button"
+        android:layout_alignLeft="@+id/button6"
+        android:layout_alignRight="@+id/button5"
+        android:onClick="Get_GPS_Data"
+        android:text="Get GPS Data" />
+
+    <Button
+        android:id="@+id/key_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/k10_button"
+        android:layout_alignRight="@+id/k10_button"
+        android:layout_alignTop="@+id/textView1"
+        android:onClick="led_control_test"
+        android:text="Key Board LED" />
+
+    <Button
+        android:id="@+id/k10_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/Rssi_button"
+        android:layout_alignLeft="@+id/button3"
+        android:layout_alignRight="@+id/button3"
+        android:onClick="clear_all_led"
+        android:text="Led Clear" />
+
+</RelativeLayout>

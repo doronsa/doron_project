@@ -1,0 +1,399 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/jni-command-help.txt",
+			"settings":
+			{
+				"buffer_size": 4121,
+				"line_ending": "Unix",
+				"name": "on the"
+			}
+		},
+		{
+			"file": "BSP_API.txt",
+			"settings":
+			{
+				"buffer_size": 4302,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/test_command.txt",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/pin_name_number_function.txt",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/board/freescale/mx6q_var_som/flash_header.S",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/frameworks/base/data/etc/platform.xml",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/README",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/board/freescale/mx6q_var_som/config.mk",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/board/freescale/mx6q_var_som/lowlevel_init.S",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/board/freescale/mx6q_var_som/Makefile",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/mach-mx6/board-mx6q_var_som.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/board/freescale/mx6q_var_som/mx6q_var_som.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/plat-mxc/include/mach/iomux-v3.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/include/autoconf.mk",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/Makefile",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/include/config_cmd_default.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/include/configs/mx6dl_var_som_nand_android.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/include/config_cmd_all.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/CHANGELOG",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/include/asm/arch-mx6/mx6_pins.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/include/configs/mx6q_sabrelite.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/board/imx31_litekit/imx31_litekit.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/board/imx",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/core.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/core.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/bus.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/host.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/sdio.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/sdio_cis.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/staging/ath6kl/hif/sdio/linux_sdio/src/hif.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/plat-mxc/include/mach/iomux.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/include/linux/mmc/card.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/fs/xfs/linux-2.6/xfs_super.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/mmc.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/sd.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/host.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/mach-mx6/board-mx6q_var_som.c",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/plat-mxc/include/mach/iomux-mx6q.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core/sd.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/plat-mxc/include/mach/imx-uart.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/plat-mxc/include/mach/gpio.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/plat-mxc/include/mach/mx6.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/mach-mx6/serial.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch/arm/plat-mxc/include/mach/io.h",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/workspace/modules-backup/set-new-target.sh",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/workspace/modules-backup/check_wifi_mac.sh",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/help-doc/all-seting-for-new-ver-update.txt",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/help-doc/android-new-ver-build.txt",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/help-doc/kernel-boot-args-test.txt",
+		"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/help-doc/update-file-system-rw-dev.txt",
+		"/home/doronsa/.config/sublime-text-2/Packages/User/Plain text.sublime-settings",
+		"/home/doronsa/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/doronsa/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx/include",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/,/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/bootable/bootloader/uboot-imx",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/arch",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/drivers/mmc/core",
+			"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/var_jb_422_110/jb_422_110_build/kernel_imx/"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"BOARD_KERNEL_CMDLINE",
+			"bootargs",
+			"CONFIG_EXTRA_ENV_SETTINGS",
+			"\"android.permission.INTERNET\"",
+			"<uses-permission android:name=\"android.permission.INTERNET\" />",
+			"CONFIG_EXTRA_ENV_SETTINGS",
+			"fbparts=16m@16m(boot)",
+			"mx6q_var_som_android_config",
+			"192.168.1.103",
+			"ipaddr 192.168.1.103",
+			"ipaddr=192.168.1.103",
+			"448m@64m(android_root)",
+			"32m@32m(recovery)",
+			"loadaddr",
+			"CONFIG_BOOTCOMMAND",
+			"bootcmd",
+			"MX6Q_PAD_DISP0_DAT19__GPIO_5_13",
+			"MX6Q_PAD_DISP0_DAT18__GPIO_5_12",
+			"RXFS",
+			"AUDMUX4_RXFS",
+			"AUDMUX4_RXFS_RX485_TX_EN",
+			"MX6Q_PAD_DISP0_DAT18",
+			"DISP0_DAT18",
+			"DISP0_DAT19",
+			"GPIO_5_13",
+			"GPIO_5_12",
+			"MX6Q_PAD_DISP0_DAT19__GPIO_5_13",
+			"GPIO_5_13",
+			"MX6Q_PAD_DISP0_DAT18__GPIO_5_12",
+			"(5, 12)",
+			"VAR_SOM_PCIE_RST_B_REVB",
+			"VAR_SOM_KEY_BACK_GPIO",
+			"VAR_SOM_PFUZE_INT",
+			"MX6Q_PAD_DISP0_DAT18",
+			"gpio_5_12",
+			"dom",
+			"DSI_CLK0P\n",
+			"DSI_CLK0P\nDSI_",
+			"DSI_CLK0P\nDSI_CLK0P",
+			"DSI_D0M",
+			"MX6Q_PAD_GPIO_0__CCM_CLKO",
+			"GPIO_5_12",
+			"MX6Q_PAD_DISP0_DAT19__GPIO_5_13",
+			"doron",
+			"free",
+			"VAR_SOM_BACKLIGHT_EN",
+			"gpio",
+			"ctw6120",
+			"mxcfb0",
+			"fbmem=24M ",
+			"video=mxcfb0",
+			"ctw6120",
+			"ttymxc0,115200",
+			"GPIO_5_13",
+			"GPIO_5_12",
+			"PAD_CSI0_DAT12__GPIO_5_12",
+			"doron",
+			"MX6Q_PAD_CSI0_DAT12__GPIO_5_12",
+			"PAD_CSI0_DATA_EN__GPIO_5_20",
+			"MX6Q_PAD_CSI0_DAT12__GPIO_5_12",
+			"gpio_5_13",
+			"doron",
+			"input",
+			"inpout",
+			"inpuot",
+			"set_gpio",
+			"MX6Q_PAD_CSI0_DAT12__GPIO_5_30",
+			"gpio_5_30",
+			"doron",
+			"low",
+			"MX6Q_PAD_DISP0_DAT9__GPIO_4_30",
+			"gpio_1_16",
+			"gpio_1",
+			"gpio_1_16",
+			"MX6Q_PAD_DISP0_DAT19",
+			"gpio_5",
+			"MX6Q_PAD_KEY_ROW0__UART4_TXD",
+			"MX6Q_PAD_DISP0_DAT19__GPIO_5_13",
+			"MX6Q_PAD_DISP0_DAT18__GPIO_5_13",
+			"MX6Q_PAD_DISP0_DAT18__GPIO_5_12",
+			"gpio_5_12",
+			"gpio_5",
+			"PAD_CTL_PUS_22K_UP",
+			"PUS",
+			"PULL_KEEP_CTL",
+			"GPIO_5_27",
+			"MX6Q_PAD_DISP0_DAT19__GPIO_5_13",
+			"gpio_5",
+			"gpio5",
+			"MX6Q_PAD_SD3_DAT5__UART2_TXD",
+			"MX6Q_PAD_SD3_DAT4__UART2_RXD",
+			"MX6Q_PAD_SD3_DAT5__UART2_RXD",
+			"MX6Q_PAD_SD3_DAT4__UART2_RXD",
+			"MX6Q_PAD_SD3_DAT4__UART2_TXD",
+			"MX6Q_PAD_SD3_DAT5__UART2_TXD",
+			"MX6Q_PAD_SD3_DAT4__UART2_RXD",
+			"UART2_RXD",
+			"MX6Q_PAD_SD3_DAT4__UART2_RXD",
+			"UART2",
+			"UART2_RXD",
+			"MX6Q_PAD_GPIO_7__UART2_TXD",
+			"UART2_TXD",
+			"uart2",
+			"uart5",
+			"MX6Q_PAD_SD3_DAT5__UART2_TXD",
+			"UART2_TXD",
+			"MX6Q_PAD_SD3_DAT5__UART2_TXD",
+			"uart2_txd",
+			"uart2",
+			"doron",
+			"MX6Q_PAD_CSI0_DAT14__UART5_TXD",
+			"uart5",
+			"imx6q_add_sdhci_usdhc_imx",
+			"SD2_DAT3",
+			"SD2_DATA",
+			"SD2_CLK",
+			"MX6Q_USDHC_PAD_CTRL",
+			"sd",
+			"mmc",
+			"mx6q_var_som_sd",
+			"mx6q_var_som_sd2_data",
+			"sd2_data",
+			"MMC",
+			"mx6q_var_som_sd",
+			"mx6q_var_som_sd2_data",
+			"mmc",
+			"__initconst",
+			"mmc"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/jni-command-help.txt",
+					"settings":
+					{
+						"buffer_size": 4121,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								109,
+								109
+							]
+						],
+						"settings":
+						{
+							"auto_name": "on the",
+							"syntax": "Packages/Text/Plain text.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "BSP_API.txt",
+					"settings":
+					{
+						"buffer_size": 4302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								570,
+								570
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/media/doronsa/457cd718-9daa-4ce7-ba1a-42d4d4842eb5/data/doron/Desktop/android-build.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}

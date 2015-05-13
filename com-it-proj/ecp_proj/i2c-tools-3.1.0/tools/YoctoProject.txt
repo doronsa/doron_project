@@ -1,0 +1,416 @@
+U-Boot 2009.08.02-00702-g1898d5a (Mar 17 2014 - 16:03:48)
+
+CPU: Freescale i.MX6 family TO1.2 at 792 MHz
+Thermal sensor with ratio = 179
+Temperature:   33 C, calibration data 0x5704d869
+mx6q pll1: 792MHz
+mx6q pll2: 528MHz
+mx6q pll3: 480MHz
+mx6q pll8: 50MHz
+ipg clock     : 66000000Hz
+ipg per clock : 66000000Hz
+uart clock    : 80000000Hz
+cspi clock    : 60000000Hz
+ahb clock     : 132000000Hz
+axi clock   : 264000000Hz
+emi_slow clock: 132000000Hz
+ddr clock     : 528000000Hz
+usdhc1 clock  : 198000000Hz
+usdhc2 clock  : 198000000Hz
+usdhc3 clock  : 198000000Hz
+usdhc4 clock  : 198000000Hz
+nfc clock     : 24000000Hz
+Board: i.MX6Q-VAR_SOM: unknown-board Board: 0x63012 [POR ]
+Boot Device: SD
+I2C:   ready
+DRAM:   1 GB
+MMC:   FSL_USDHC: 0
+*** Warning - bad CRC or MMC, using default environment
+
+In:    serial
+Out:   serial
+Err:   serial
+Found PFUZE100! deviceid=10,revid=11
+Net:   got MAC address from IIM: f8:dc:7a:03:2c:15
+FEC0 [PRIME]
+Hit any key to stop autoboot:  0 
+mmc0 is current device
+
+MMC read: dev # 0, block # 2048, count 12288 ... 12288 blocks read: OK
+## Booting kernel from Legacy Image at 10800000 ...
+   Image Name:   Linux-3.0.35-IMX6.VAR_R17.1
+   Image Type:   ARM Linux Kernel Image (uncompressed)
+   Data Size:    4328056 Bytes =  4.1 MB
+   Load Address: 10008000
+   Entry Point:  10008000
+   Verifying Checksum ... OK
+   Loading Kernel Image ... OK
+OK
+
+Starting kernel ...
+
+Linux version 3.0.35-IMX6.VAR_R17.1 (variscite@bobo) (gcc version 4.8.1 (GCC) ) #1 SMP PREEMPT Tue Mar 18 16:32:42 IST 2014
+CPU: ARMv7 Processor [412fc09a] revision 10 (ARMv7), cr=10c53c7d
+CPU: VIPT nonaliasing data cache, VIPT aliasing instruction cache
+Machine: Variscite i.MX 6Quad/DualLite/Solo SOM Board
+Memory policy: ECC disabled, Data cache writealloc
+CPU identified as i.MX6Q, silicon rev 1.2
+PERCPU: Embedded 7 pages/cpu @8c008000 s5440 r8192 d15040 u32768
+Built 1 zonelists in Zone order, mobility grouping on.  Total pages: 194560
+Kernel command line: console=ttymxc0,115200 ip=off root=/dev/mmcblk0p1 rootwait
+PID hash table entries: 4096 (order: 2, 16384 bytes)
+Dentry cache hash table entries: 131072 (order: 7, 524288 bytes)
+Inode-cache hash table entries: 65536 (order: 6, 262144 bytes)
+Memory: 512MB 256MB = 768MB total
+Memory: 764372k/764372k available, 284204k reserved, 0K highmem
+Virtual kernel memory layout:
+    vector  : 0xffff0000 - 0xffff1000   (   4 kB)
+    fixmap  : 0xfff00000 - 0xfffe0000   ( 896 kB)
+    DMA     : 0xf4600000 - 0xffe00000   ( 184 MB)
+    vmalloc : 0xc0800000 - 0xf2000000   ( 792 MB)
+    lowmem  : 0x80000000 - 0xc0000000   (1024 MB)
+    pkmap   : 0x7fe00000 - 0x80000000   (   2 MB)
+    modules : 0x7f000000 - 0x7fe00000   (  14 MB)
+      .init : 0x80008000 - 0x80041000   ( 228 kB)
+      .text : 0x80041000 - 0x80bdd8f4   (11891 kB)
+      .data : 0x80bde000 - 0x80c5ea20   ( 515 kB)
+       .bss : 0x80c5ea44 - 0x80cad844   ( 316 kB)
+SLUB: Genslabs=13, HWalign=32, Order=0-3, MinObjects=0, CPUs=2, Nodes=1
+Preemptible hierarchical RCU implementation.
+NR_IRQS:624
+MXC GPIO hardware
+sched_clock: 32 bits at 3000kHz, resolution 333ns, wraps every 1431655ms
+arm_max_freq=1GHz
+MXC_Early serial console at MMIO 0x2020000 (options '115200')
+bootconsole [ttymxc0] enabled
+Console: colour dummy device 80x30
+Calibrating delay loop... 1581.05 BogoMIPS (lpj=7905280)
+pid_max: default: 32768 minimum: 301
+Mount-cache hash table entries: 512
+CPU: Testing write buffer coherency: ok
+hw perfevents: enabled with ARMv7 Cortex-A9 PMU driver, 7 counters available
+CPU1: Booted secondary processor
+Brought up 2 CPUs
+SMP: Total of 2 processors activated (3162.11 BogoMIPS).
+devtmpfs: initialized
+print_constraints: dummy: 
+NET: Registered protocol family 16
+print_constraints: vddpu: 725 <--> 1300 mV at 700 mV fast normal 
+print_constraints: vddcore: 725 <--> 1300 mV at 1150 mV fast normal 
+print_constraints: vddsoc: 725 <--> 1300 mV at 1200 mV fast normal 
+print_constraints: vdd2p5: 2000 <--> 2775 mV at 2400 mV fast normal 
+print_constraints: vdd1p1: 800 <--> 1400 mV at 1100 mV fast normal 
+print_constraints: vdd3p0: 2625 <--> 3400 mV at 3000 mV fast normal 
+imx_add_mxc_pwm:pdata=  (null)
+hw-breakpoint: found 6 breakpoint and 1 watchpoint registers.
+hw-breakpoint: 1 breakpoint(s) reserved for watchpoint single-step.
+hw-breakpoint: maximum watchpoint size is 4 bytes.
+L310 cache controller enabled
+l2x0: 16 ways, CACHE_ID 0x410000c7, AUX_CTRL 0x02070000, Cache size: 1048576 B
+bio: create slab <bio-0> at 0
+mxs-dma mxs-dma-apbh: initialized
+print_constraints: vmmc: 3300 mV 
+print_constraints: VDD_1.8V: 1800 mV 
+vgaarb: loaded
+SCSI subsystem initialized
+spi_imx imx6q-ecspi.2: probed
+usbcore: registered new interface driver usbfs
+usbcore: registered new interface driver hub
+usbcore: registered new device driver usb
+Freescale USB OTG Driver loaded, $Revision: 1.55 $
+mc_pfuze 1-0008: ID: 0,Full lay: 1 ,Metal lay: 1
+mc_pfuze 1-0008: FAB: 0 ,FIN: 0
+print_constraints: PFUZE100_SW1A: 300 <--> 1875 mV at 1300 mV 
+print_constraints: PFUZE100_SW1B: 300 <--> 1875 mV at 300 mV 
+print_constraints: PFUZE100_SW1C: 300 <--> 1875 mV at 1300 mV 
+print_constraints: PFUZE100_SW3A: 400 <--> 1975 mV at 1500 mV 
+print_constraints: PFUZE100_SW3B: 400 <--> 1975 mV at 1500 mV 
+print_constraints: PFUZE100_SW4: 800 <--> 3950 mV at 2400 mV 
+print_constraints: PFUZE100_VSNVS: 1200 <--> 3000 mV at 1800 mV 
+print_constraints: PFUZE100_VREFDDR: at 750 mV 
+print_constraints: PFUZE100_VGEN3: 1800 <--> 3300 mV at 2500 mV 
+print_constraints: PFUZE100_VGEN4: 1800 <--> 3300 mV at 1800 mV 
+print_constraints: PFUZE100_VGEN5: 1800 <--> 3300 mV at 2500 mV 
+print_constraints: PFUZE100_VGEN6: 3300 mV 
+imx-ipuv3 imx-ipuv3.0: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+imx-ipuv3 imx-ipuv3.1: IPU DMFC NORMAL mode: 1(0~1), 5B(4,5), 5F(6,7)
+mxc_mipi_csi2 mxc_mipi_csi2: i.MX MIPI CSI2 driver probed
+mxc_mipi_csi2 mxc_mipi_csi2: i.MX MIPI CSI2 dphy version is 0x3130302a
+MIPI CSI2 driver module loaded
+Advanced Linux Sound Architecture Driver Version 1.0.24.
+Bluetooth: Core ver 2.16
+NET: Registered protocol family 31
+Bluetooth: HCI device and connection manager initialized
+Bluetooth: HCI socket layer initialized
+Bluetooth: L2CAP socket layer initialized
+Bluetooth: SCO socket layer initialized
+cfg80211: Calling CRDA to update world regulatory domain
+i2c-core: driver [max17135] using legacy suspend method
+i2c-core: driver [max17135] using legacy resume method
+Switching to clocksource mxc_timer1
+NET: Registered protocol family 2
+IP route cache hash table entries: 32768 (order: 5, 131072 bytes)
+TCP established hash table entries: 131072 (order: 8, 1048576 bytes)
+TCP bind hash table entries: 65536 (order: 7, 786432 bytes)
+TCP: Hash tables configured (established 131072 bind 65536)
+TCP reno registered
+UDP hash table entries: 512 (order: 2, 16384 bytes)
+UDP-Lite hash table entries: 512 (order: 2, 16384 bytes)
+NET: Registered protocol family 1
+RPC: Registered named UNIX socket transport module.
+RPC: Registered udp transport module.
+RPC: Registered tcp transport module.
+RPC: Registered tcp NFSv4.1 backchannel transport module.
+PMU: registered new PMU device of type 0
+Static Power Management for Freescale i.MX6
+wait mode is enabled for i.MX6
+cpaddr = c0880000 suspend_iram_base=c08f4000
+PM driver module loaded
+iMX6 PCIe PCIe RC mode imx_pcie_pltfm_probe entering.
+PCIE: imx_pcie_pltfm_probe start link up.
+link up failed, DB_R0:0x00589400, DB_R1:0x08200000!
+IMX PCIe port: link down!
+IMX usb wakeup probe
+add wake up source irq 75
+IMX usb wakeup probe
+cpu regulator mode:ldo_bypass
+_regulator_get: get() with no identifier
+mx6_cpu_regulator_init: failed to get pu regulator
+i.MXC CPU frequency driver
+JFFS2 version 2.2. (NAND) © 2001-2006 Red Hat, Inc.
+msgmni has been set to 1492
+alg: No test for stdrng (krng)
+io scheduler noop registered
+io scheduler deadline registered
+io scheduler cfq registered (default)
+pwm_config: pwm freq = 20000, clk_select=2 clock_rate=22000000
+MIPI DSI driver module loaded
+mxc_sdc_fb mxc_sdc_fb.0: register mxc display driver ldb
+_regulator_get: get() with no identifier
+ldb_disp_init: ret=1, 800x480
+ldb_disp_init:r=78, x=800, y=480, p=28000, l=28, r=17, upper=13, lower=20, h=20, v=13
+ldb_disp_init: 1280x800
+ipu_init_sync_panel: disp=0, pixel_clk=35714000 38791836
+pwm_config: pwm freq = 20000, clk_select=2 clock_rate=22000000
+ipu_init_sync_panel: disp=0, pixel_clk=35714000 38791836
+Console: switching to colour frame buffer device 100x30
+imx-sdma imx-sdma: loaded firmware 1.1
+imx-sdma imx-sdma: initialized
+Serial: IMX driver
+imx-uart.0: ttymxc0 at MMIO 0x2020000 (irq = 58) is a IMX
+console [ttymxc0] enabled, bootconsole disabled
+console [ttymxc0] enabled, bootconsole disabled
+imx-uart.1: ttymxc1 at MMIO 0x21e8000 (irq = 59) is a IMX
+imx-uart.2: ttymxc2 at MMIO 0x21ec000 (irq = 60) is a IMX
+loop: module loaded
+Can't recover from RESET HBA!
+No sata disk.
+ONFI flash detected
+ONFI param page 0 valid
+NAND device: Manufacturer ID: 0x2c, Chip ID: 0xdc (Micron MT29F4G08ABADAWP)
+gpmi-nand imx6q-gpmi-nand.0: enable asynchronous EDO mode 5
+Bad block table not found for chip 0
+Bad block table not found for chip 0
+Scanning device for bad blocks
+Bad eraseblock 100 at 0x000000c80000
+Bad eraseblock 101 at 0x000000ca0000
+Creating 6 MTD partitions on "gpmi-nand":
+0x000000000000-0x000000200000 : "bootloader"
+0x000000200000-0x000000800000 : "kernel"
+0x000000800000-0x000020000000 : "rootfs"
+0x000001000000-0x000002000000 : "android_boot"
+0x000002000000-0x000004000000 : "android_recovery"
+0x000004000000-0x000020000000 : "android_rootfs"
+GPMI NAND driver registered. (IMX)
+vcan: Virtual CAN interface driver
+CAN device driver interface
+flexcan netdevice driver
+flexcan imx6q-flexcan.0: device registered (reg_base=c09b8000, irq=142)
+FEC Ethernet Driver
+fec_enet_mii_bus: probed
+ehci_hcd: USB 2.0 'Enhanced' Host Controller (EHCI) Driver
+fsl-ehci fsl-ehci.0: Freescale On-Chip EHCI Host Controller
+fsl-ehci fsl-ehci.0: new USB bus registered, assigned bus number 1
+fsl-ehci fsl-ehci.0: irq 75, io base 0x02184000
+fsl-ehci fsl-ehci.0: USB 2.0 started, EHCI 1.00
+hub 1-0:1.0: USB hub found
+hub 1-0:1.0: 1 port detected
+add wake up source irq 72
+fsl-ehci fsl-ehci.1: Freescale On-Chip EHCI Host Controller
+fsl-ehci fsl-ehci.1: new USB bus registered, assigned bus number 2
+fsl-ehci fsl-ehci.1: irq 72, io base 0x02184200
+fsl-ehci fsl-ehci.1: USB 2.0 started, EHCI 1.00
+hub 2-0:1.0: USB hub found
+hub 2-0:1.0: 1 port detected
+Initializing USB Mass Storage driver...
+usbcore: registered new interface driver usb-storage
+USB Mass Storage support registered.
+ARC USBOTG Device Controller driver (1 August 2005)
+mousedev: PS/2 mouse device common for all mice
+input: gpio-keys as /devices/platform/gpio-keys/input/input0
+ctw6120: probe of 2-0038 failed with error -5
+ads7846 spi2.0: touchscreen, irq 377
+input: ADS7846 Touchscreen as /devices/platform/imx6q-ecspi.2/spi_master/spi2/spi2.0/input/input1
+i2c-core: driver [isl29023] using legacy suspend method
+i2c-core: driver [isl29023] using legacy resume method
+rtc-ds1307 2-0068: rtc core: registered ds1307 as rtc0
+rtc-ds1307 2-0068: 56 bytes nvram
+i2c /dev entries driver
+Linux video capture interface: v2.00
+mxc_v4l2_output mxc_v4l2_output.0: V4L2 device registered as video16
+mxc_v4l2_output mxc_v4l2_output.0: V4L2 device registered as video17
+i2c-core: driver [mag3110] using legacy suspend method
+i2c-core: driver [mag3110] using legacy resume method
+imx2-wdt imx2-wdt.0: IMX2+ Watchdog Timer enabled. timeout=60s (nowayout=1)
+device-mapper: ioctl: 4.20.0-ioctl (2011-02-02) initialised: dm-devel@redhat.com
+Bluetooth: Virtual HCI driver ver 1.3
+Bluetooth: HCI UART driver ver 2.2
+Bluetooth: HCI H4 protocol initialized
+Bluetooth: HCI BCSP protocol initialized
+Bluetooth: HCILL protocol initialized
+sdhci: Secure Digital Host Controller Interface driver
+sdhci: Copyright(c) Pierre Ossman
+mmc0: SDHCI controller on platform [sdhci-esdhc-imx.1] using DMA
+mmc1: SDHCI controller on platform [sdhci-esdhc-imx.2] using DMA
+mxc_vdoa mxc_vdoa: i.MX Video Data Order Adapter(VDOA) driver probed
+VPU initialized
+mxc_asrc registered
+Galcore version 4.6.9.6622
+Thermal calibration data is 0x5704d869
+Thermal sensor with ratio = 179
+Anatop Thermal registered as thermal_zone0
+anatop_thermal_probe: default cooling device is cpufreq!
+mmc0: new high speed SDHC card at address aaaa
+usbcore: registered new interface driver usbhid
+mmcblk0: mmc0:aaaa SU04G 3.69 GiB 
+ mmcblk0: p1
+usbhid: USB HID core driver
+usbcore: registered new interface driver snd-usb-audio
+usb 2-1: new high speed USB device number 2 using fsl-ehci
+mxc_hdmi_soc mxc_hdmi_soc.0: MXC HDMI Audio
+Cirrus Logic CS42888 ALSA SoC Codec Driver
+i2c-core: driver [cs42888] using legacy suspend method
+i2c-core: driver [cs42888] using legacy resume method
+mmc1: card claims to support voltages below the defined range. These will be ignored.
+imx-hdmi-soc-dai imx-hdmi-soc-dai.0: Failed: Load HDMI-video first.
+tlv320aic3x-codec 1-001b: asoc: failed to add kcontrol Left Line1R Mux
+tlv320aic3x-codec 1-001b: asoc: failed to add kcontrol Left Line1L Mux
+mmc1: queuing unknown CIS tuple 0x91 (3 bytes)
+mmc1: new SDIO card at address 0001
+asoc: tlv320aic3x-hifi <-> imx-ssi.1 mapping ok
+imx_3stack asoc driver
+Initialize HDMI-audio failed. Load HDMI-video first!
+ALSA device list:
+  #0: wm8962-audio
+NET: Registered protocol family 26
+TCP cubic registered
+NET: Registered protocol family 17
+can: controller area network core (rev 20090105 abi 8)
+NET: Registered protocol family 29
+can: raw protocol (rev 20090105)
+can: broadcast manager protocol (rev 20090105 t)
+Bluetooth: RFCOMM TTY layer initialized
+Bluetooth: RFCOMM socket layer initialized
+Bluetooth: RFCOMM ver 1.11
+Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+Bluetooth: BNEP filters: protocol multicast
+Bluetooth: HIDP (Human Interface Emulation) ver 1.2
+lib80211: common routines for IEEE802.11 drivers
+VFP support v0.3: 
+hub 2-1:1.0: USB hub found
+hub 2-1:1.0: 4 ports detected
+implementor 41 architecture 3 part 30 variant 9 rev 4
+Bus freq driver module loaded
+Bus freq driver Enabled
+mxc_dvfs_core_probe
+DVFS driver module loaded
+regulator_init_complete: PFUZE100_VGEN6: incomplete constraints, leaving on
+rtc-ds1307 2-0068: setting system clock to 2000-01-01 00:04:30 UTC (946685070)
+EXT3-fs: barriers not enabled
+kjournald starting.  Commit interval 5 seconds
+EXT3-fs (mmcblk0p1): using internal journal
+EXT3-fs (mmcblk0p1): recovery complete
+EXT3-fs (mmcblk0p1): mounted filesystem with writeback data mode
+VFS: Mounted root (ext3 filesystem) on device 179:1.
+devtmpfs: mounted
+Freeing init memory: 228K
+INIT: version 2.88 booting
+ALSA: Storing mixer settings...
+Starting udev
+udevd[1526]: starting version 182
+mx6q_mipi_powerdown: powerdown=0, power_gp=0x4d
+ov5640_read_reg:write reg error:reg=300a
+camera ov5640_mipi is not found
+add wake up source irq 109
+wl1271: loaded
+wl1271: initialized
+Starting Bootlog daemon: bootlogd.
+Populating dev cache
+ALSA: Restoring mixer settings...
+Configuring network interfaces... eth0: Freescale FEC PHY driver [Micrel KSZ9031 Gigabit PHY] (mii_bus:phy_addr=1:07, irq=-1)
+udhcpc (v1.21.1) started
+Sending discover...
+Sending discover...
+Sending discover...
+No lease, failing
+Starting rpcbind daemon...rpcbind: cannot create socket for udp6
+rpcbind: cannot create socket for tcp6
+done.
+Tue Mar 18 16:36:00 UTC 2014
+Running postinst /etc/rpm-postinsts/100-debianutils...
+update-rc.d: /etc/init.d/run-postinsts exists during rc.d purge (continuing)
+ Removing any system startup links for run-postinsts ...
+  /etc/rcS.d/S99run-postinsts
+INIT: Entering runlevel: 5
+Starting Xserver
+Starting system message bus: dbus.
+Starting Connection Manager
+ipu_init_sync_panel: disp=0, pixel_clk=35714000 38791836
+pwm_config: pwm freq = 20000, clk_select=2 clock_rate=22000000
+Starting Dropbear SSH server: Will output 1024 bit rsa secret key to '/etc/dropbear/dropbear_rsa_host_key'
+Generating key, this may take a while...
+[drm] Initialized drm 1.1.0 20060810
+[drm] Initialized vivante 1.0.0 20120216 on minor 0
+Public key portion is:
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAAAgmH+p6ixYROcMVsmAxBl9FZofgyFsRhqy7nyubPjTm2rgjOmIIEAzFizM7wDsaZjpsKBTu9wTtnadKL/IPi8j+Agr95LRApabNKnZjPwA1tFYIuDIMKILGYf0kgWfSpwCdfraGx9AKZao7KwDg7cQtviCymU1Gya355p4xhfieJL9U8= root@varsommx6q
+Fingerprint: md5 e0:4d:fd:4d:91:74:94:ba:bb:33:37:ec:f5:34:8f:9a
+wl1271: firmware booted (Rev 6.1.5.50.74)
+dropbear.
+Starting advanced power management daemon: apmd.
+apmd[2438]: apmd 3.2.1 interfacing with apm driver 1.13 and APM BIOS 1.2
+creating NFS state directory: done
+NFS daemon support not enabled in kernel
+Starting syslogd/klogd: done
+ * Starting Avahi mDNS/DNS-SD Daemon: avahi-daemon
+ipu_init_sync_panel: disp=0, pixel_clk=35714000 38791836
+pwm_config: pwm freq = 20000, clk_select=2 clock_rate=22000000
+   ...fail!
+Starting Telephony daemon
+Starting Linux NFC daemon
+Starting OProfileUI server
+Running local boot scripts (/etc/rc.local).
+
+** (oprofile-server:2492): WARNING **: Failed to create avahi client: Daemon not running
+Stopping Bootlog daemon: bootlogd.
+Starting tcf-agent: OK
+mmc1: new SDIO card at address 0001
+BT found
+Device setup complete
+
+__      __        _          _ _       
+\ \    / /       (_)        (_) |      
+ \ \  / /_ _ _ __ _ ___  ___ _| |_ ___ 
+  \ \/ / _` | '__| / __|/ __| | __/ _ \
+   \  / (_| | |  | \__ \ (__| | ||  __/
+    \/ \__,_|_|  |_|___/\___|_|\__\___|
+
+          2014 Variscite, Ltd.
+
+           << VAR-SOM-MX6 >>
+
+
+Poky (Yocto Project Reference Distro) 1.5.1 varsommx6q /dev/ttymxc0
+
+varsommx6q login: root
+root@varsommx6q:~# 
+

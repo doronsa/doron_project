@@ -1,0 +1,117 @@
+
+BSP API : 
+	
+1. Commands : 
+	
+	Command ID                      Command_Name  
+	
+	1 				e_CmdK10_GetAppVersion	  	e_CmdK10_GetAppVersion															SetMsg(15 , 2 , new long []{1,2})
+	2 				e_CmdK10_CheckComm		 	e_CmdK10_CheckComm																SetMsg(0 , 2 , new long []{1,2})
+	3 				e_CmdK10_SelfTest		  	e_CmdK10_SelfTest																SetMsg(1 , 2 , new long []{1,2})
+	4 				e_CmdK10_SetParam			e_CmdK10_SetParam  				struct St_K10Param								SetMsg(2 , 15 , new long []{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15})
+					e_CmdK10_DisplayCommandGet																					SetMsg(3 , 2 , new long []{1,2})
+	5 				e_CmdK10_DisplayCommandSet 																					SetMsg(4 , 20 , new long []{1,2,3,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,1,2})
+					back Light and led test
+	6 				e_CmdK10_DisplayCommandSet	        e_CmdK10_DisplayCommandSet       on debug set the same as on the server
+																				need to set the St_K10_DisplaySet struct
+					e_CmdK10_SensorCommandGet
+					e_CmdK10_SolenoidCommandSet             struct St_K10_SolenoidCommandSet
+					e_CmdK10_LedCommandSet 			struct St_K10_LedCommandSet																				
+	7 				e_CmdK10_PowerCommandSet	        e_CmdK10_PowerCommandSet		struct St_K10_PowerCommandSet
+					e_CmdK10_Set2LowPower
+	8 				e_CmdK10_PowerCommandGet                e_CmdK10_PowerCommandGet
+	k 				e_CmdK10_Jump2Loader	                e_CmdK10_Jump2Loader			set the k10 to wait to load command
+	l 				e_CmdK10_Jump2App			e_CmdK10_Jump2App				set the k10 to go to application (reset)
+	m 				e_CmdK10_DownLoad			e_CmdK10_DownLoad				download the new binary file
+	*********************************** not applicable ********************************************************************
+												e_CmdK10_ResetApp
+												e_CmdK10_GetRTCTime
+												e_CmdK10_SetRTCTime				struct St_K10_RTCTime
+	***********************************************************************************************************************
+
+	95				run the DownloadK10 make all need for downloading
+					e_CmdK10_PeriodicMonitorPoll
+	a 				Init Cylipso cb				        60 -Init Cylipso cb
+	b 				Set params					61 Set params
+	c 				TR_IsCardIn					62
+	d 				TR_Forget					63
+	e 				TR_GetEnvironmentData		                64
+	f 				TR_GetListForReportAndReload                    65
+	g 				TR_GetListForUse			        66
+	h 				TR_IsPossibleLoad			        67
+	i 				TR_Load 					68
+	j 				TR_Use                                          69
+	v 				Test Key Board LED  		                92	e_BSPKeyBoardled		    set the key board led
+	q 				Test GPIO 					93	e_BSPGPIO_1					set gpio and value
+	99				K10 response for GetAppVersion
+
+
+
+
+2. events
+
+	all data from the JNI is sanding from :SendDataToJava
+	e_CmdK10_PeriodicMonitorEvent struct :St_K10_PeriodicMonitorPoll
+	e_CmdK10_PeriodicMonitorPoll  struct :St_K10_PeriodicMonitorPoll
+	----------------------------------------------------------------
+	e_CmdK10_KeyBoardEvent the key board event (not from k10) event:
+	typedef struct
+	{
+		int SendOK;
+		int time;
+		int keynum;
+	}SandKeyToKGUI;
+	--------------------------------------------------------------------
+	e_BSPGPIO_1 GPIO event :
+	typedef struct
+	{
+		int gpio_num ;
+		int value;
+		int SendOK;
+		int cmd;
+	}GPIOSetup;
+	
+3. GPIO	
+	
+	pin name       number             function
+	GPIO[5]12	140		IOEXTPWR.ACCSNS
+	GPIO[5]30	158		CELL_ON
+	GPIO[6]2	162		Prt_MMI.P_SNS_SDA
+	GPIO[3]21	85		Cell_LED_K
+	GPIO[1]16	16		LVDS_PWRON
+	GPIO4[14]	110		CAM_LINK_MB_CAM_NRST
+	GPIO4[15]	111		CAM_LINK_MB_CAM_PWD
+	GPIO3[13] 	77		CAM_LINK_MB_CAMERA_DETECT
+	GPIO5[17]	145		CAM_LINK_MB_FLASH_EN
+	GPIO[5]21	149		USDSOM_SDOE
+	GPIO1[17]	17		IOEXTMB_USB485_SUSPEND
+	GPIO1[19]	19		IOEXTMB_USB485_RST	
+	GPIO5[14]	142		GPS_GPS_ON
+	GPIO5[15]	143		GPS_GPS_PWR
+	GPIO5[19]	147		CPT_RST
+	GPIO4[10]	106		K10_nRST
+	GPIO1[21]	21		D_MMI2MB.KEY_NINT
+	GPIO5[27]	155		sel2_CTL
+	GPIO5[26]	154		sel2_FLT
+	GPIO5[13]	141		DRV_reader.HALL1
+	GPIO1[18]	18		Prt_MMI.HALL2
+	GPIO3[22]	86		Prt_MMI.LED_G_CTL
+	GPIO5[16]	144		Prt_MMI.nPRESET
+	GPIO[5]31	159		SPKEN
+												
+4. Printer
+  
+	   PRINTER_INIT
+	   PRINT_IMAGE
+	   PRINTER_CUT
+	   PRINTER_PARTIAL_CUT
+	   PRINTER_TEST
+	   PRINTER_STATUS
+   
+ 5. Modem
+          
+           MODEM_CONNECT
+           MODEM_DISCONNECT
+           MODEM_STATUS
+           MODEM_STATUS
+           MODEM_RSSI
