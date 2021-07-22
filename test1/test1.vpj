@@ -1,0 +1,74 @@
+<!DOCTYPE Project SYSTEM "http://www.slickedit.com/dtd/vse/10.0/vpj.dtd">
+<Project
+    Version="10.0"
+    VendorName="SlickEdit"
+    TemplateName="(Other)"
+    WorkingDir=".">
+    <Config
+        Name="Release"
+        OutputFile=""
+        CompilerConfigName="">
+        <Menu>
+            <Target
+                Name="Compile"
+                MenuCaption="&amp;Compile"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveCurrent"
+                RunFromDir="%rw">
+                <Exec/>
+            </Target>
+            <Target
+                Name="Build"
+                MenuCaption="&amp;Build"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw">
+                <Exec/>
+            </Target>
+            <Target
+                Name="Rebuild"
+                MenuCaption="&amp;Rebuild"
+                CaptureOutputWith="ProcessBuffer"
+                SaveOption="SaveWorkspaceFiles"
+                RunFromDir="%rw">
+                <Exec/>
+            </Target>
+            <Target
+                Name="Debug"
+                MenuCaption="&amp;Debug"
+                SaveOption="SaveNone"
+                RunFromDir="%rw">
+                <Exec/>
+            </Target>
+            <Target
+                Name="Execute"
+                MenuCaption="E&amp;xecute"
+                SaveOption="SaveNone"
+                RunFromDir="%rw">
+                <Exec CmdLine='".exe"'/>
+            </Target>
+        </Menu>
+    </Config>
+    <Files>
+        <Folder
+            Name="Source Files"
+            Filters="*.c;*.C;*.cc;*.cpp;*.cp;*.cxx;*.c++;*.prg;*.pas;*.dpr;*.asm;*.s;*.bas;*.java;*.cs;*.sc;*.scala;*.e;*.cob;*.html;*.rc;*.tcl;*.py;*.pl;*.d;*.m;*.mm;*.go;*.groovy;*.gsh"
+            GUID="{B8703E25-DF04-4C62-B671-D8F8000052D8}"/>
+        <Folder
+            Name="Header Files"
+            Filters="*.h;*.H;*.hh;*.hpp;*.hxx;*.h++;*.inc;*.sh;*.cpy;*.if"
+            GUID="{D14CEC2F-7BC3-424C-84D6-45407DF1AE81}"/>
+        <Folder
+            Name="Resource Files"
+            Filters="*.ico;*.cur;*.dlg"
+            GUID="{51EBDB99-168C-48C6-8970-3D0075F38809}"/>
+        <Folder
+            Name="Bitmaps"
+            Filters="*.bmp"
+            GUID="{97D71947-4475-4316-B119-5D13465CB703}"/>
+        <Folder
+            Name="Other Files"
+            Filters=""
+            GUID="{47D12B11-9842-4099-83EB-64A733708FB9}"/>
+    </Files>
+</Project>
