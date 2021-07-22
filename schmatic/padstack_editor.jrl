@@ -1,0 +1,6 @@
+\t (00:00:01) padstack_editor 17.4 P001 Windows SPB 64-bit Edition
+\t (00:00:01)     Journal start - Sun Jun  7 18:22:30 2020
+\t (00:00:01)         Host=VPC User=doron_lab Pid=17480 CPUs=8
+\t (00:00:01) CmdLine= c:\cadence\spb_17.4\tools\bin\padstack_editor.exe E:\Users\doron_lab\Desktop\Arduino\schmatic\t_q85_135_m135.pad
+\t (00:00:01) 
+\t (00:00:03)     Journal end - Sun Jun  7 18:22:32 2020

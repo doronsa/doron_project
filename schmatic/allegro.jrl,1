@@ -1,0 +1,80 @@
+\t (00:00:46) allegro 17.4 P001 Windows SPB 64-bit Edition
+\t (00:00:46)     Journal start - Sun Jun  7 18:20:06 2020
+\t (00:00:46)         Host=VPC User=doron_lab Pid=10064 CPUs=8
+\t (00:00:46) CmdLine= c:\cadence\spb_17.4\tools\bin\allegro.exe E:\Users\doron_lab\Desktop\Arduino\schmatic\ARDUINO_UNO_REV3_DEVELOPMEN.dra
+\t (00:00:46) 
+   (00:00:46) Loading axlcore.cxt 
+\t (00:00:52) Opening existing design...
+\i (00:01:29) fillin yes 
+\i (00:01:30) QtSignal SPBFoldDockArea FoldAreaTabWidget currentChanged ARDUINO_UNO_REV3_DEVELOPMEN
+\d (00:01:30) Design opened: E:/Users/doron_lab/Desktop/Arduino/schmatic/ARDUINO_UNO_REV3_DEVELOPMEN.dra
+\i (00:01:31) trapsize 40210
+\i (00:01:31) trapsize 42192
+\i (00:01:31) trapsize 40210
+\i (00:01:31) trapsize 62945
+   (00:01:31) Loading cmds.cxt 
+\i (00:01:31) generaledit 
+\i (00:01:33) pick grid -0.8874 -9.3654
+\t (00:01:33) last pick:  0.0000 -10.1600
+\i (00:01:34) drag_start grid -0.8874 -9.3654
+\i (00:01:35) drag_stop 172.8398 87.5693
+\i (00:01:35) zoom out 1 
+\i (00:01:35) setwindow pcb
+\i (00:01:35) zoom out 180.3931 78.7570
+\i (00:01:35) trapsize 81358
+\i (00:01:36) zoom out 1 
+\i (00:01:36) setwindow pcb
+\i (00:01:36) zoom out 282.4038 -9.9960
+\i (00:01:36) trapsize 81358
+\i (00:01:36) zoom in 1 
+\i (00:01:36) setwindow pcb
+\i (00:01:36) zoom in 282.4038 -9.9960
+\i (00:01:36) trapsize 40679
+\i (00:01:37) zoom out 1 
+\i (00:01:37) setwindow pcb
+\i (00:01:37) zoom out 57.0419 -9.9960
+\i (00:01:37) trapsize 81358
+\i (00:01:37) zoom out 1 
+\i (00:01:37) setwindow pcb
+\i (00:01:37) zoom out 282.4038 -9.9960
+\i (00:01:37) trapsize 81358
+\i (00:01:37) zoom in 1 
+\i (00:01:37) setwindow pcb
+\i (00:01:37) zoom in 282.4038 -9.9960
+\i (00:01:37) trapsize 40679
+\i (00:01:37) zoom in 1 
+\i (00:01:37) setwindow pcb
+\i (00:01:37) zoom in 57.0419 -9.9960
+\i (00:01:37) trapsize 20340
+\i (00:01:38) zoom in 1 
+\i (00:01:38) setwindow pcb
+\i (00:01:38) zoom in 57.0420 -9.9960
+\i (00:01:38) trapsize 10170
+\i (00:01:38) zoom in 1 
+\i (00:01:38) setwindow pcb
+\i (00:01:38) zoom in 57.0420 -9.9960
+\i (00:01:38) trapsize 5085
+\i (00:01:38) zoom out 1 
+\i (00:01:38) setwindow pcb
+\i (00:01:38) zoom out 57.0420 -9.9959
+\i (00:01:38) trapsize 10170
+\i (00:01:39) zoom out 1 
+\i (00:01:39) setwindow pcb
+\i (00:01:39) zoom out 57.2455 -9.9960
+\i (00:01:39) trapsize 20340
+\i (00:01:39) zoom out 1 
+\i (00:01:39) setwindow pcb
+\i (00:01:39) zoom out 57.2455 -9.9959
+\i (00:01:39) trapsize 40679
+\i (00:01:39) zoom in 1 
+\i (00:01:39) setwindow pcb
+\i (00:01:39) zoom in 57.8555 -9.9959
+\i (00:01:39) trapsize 20340
+\i (00:01:47) drag_start grid -31.2316 48.1751
+\i (00:01:48) drag_stop 42.8043 -48.2342
+\i (00:01:50) drag_start grid 0.0913 -16.5045
+\i (00:01:51) roam x -16
+\i (00:01:51) roam x -256
+\i (00:01:51) drag_stop -59.7070 -23.4200
+\i (00:01:54) exit 
+\t (00:01:57)     Journal end - Sun Jun  7 18:21:17 2020
