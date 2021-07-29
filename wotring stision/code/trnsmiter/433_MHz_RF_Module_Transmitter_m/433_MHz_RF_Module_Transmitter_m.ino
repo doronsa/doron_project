@@ -32,16 +32,20 @@ void setup()
 
 void loop()
 {
-    char msg[25];
+    char msg[31];
     String  temp;
-    //const char *msg = "Welcome to the Workshop!";
-    //sprintf(temp,"Message Trensmit:%d%d%d%d%d",TempSensor,Humidity,Pressure,Volt,Spaer);
+    int i=0;
+    TempSensor = TempSensor+20;
+    Humidity=Humidity+20;
+    Pressure=Pressure+20;
+    Volt=Volt+20;
+    Spaer=Spaer+20;
+
     Serial.print("Message Trensmit: ");
     temp = String(TempSensor)+","+ String(Humidity)
     +","+ String(Pressure)+","+ String(Volt)+ ","+String(Spaer)+","+"/O";
     Serial.println(temp);         
-    
-    temp.toCharArray(msg, 25);
+    temp.toCharArray(msg, 31);
     Serial.print("Message Len: ");
     Serial.println(strlen(msg));
     rf_driver.send((uint8_t *)msg, strlen(msg));
